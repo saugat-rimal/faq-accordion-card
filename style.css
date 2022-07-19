@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+* {
+    font-family: 'Kumbh Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background: linear-gradient(hsl(273, 75%, 66%),
+            hsl(240, 73%, 65%));
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#box {
+    background-color: white;
+    margin: 0 .5rem;
+    padding: 1.5rem;
+    max-width: 360px;
+    border-radius: 30px;
+    filter: drop-shadow(2px 4px 40px rgba(56, 27, 68, 0.7));
+}
+
+
+h1 {
+    text-align: center;
+    margin-top: -80px;
+}
+
+img {
+    width: 250px;
+}
+
+#faq {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
+
+summary {
+    padding: 1rem 0;
+    font-size: 15px;
+}
+
+details {
+    border-bottom: 1px solid hsl(240, 5%, 91%);
+    color: #787887;
+}
+
+details>p {
+    max-width: 280px;
+    font-size: 14px;
+    padding-bottom: 1.5rem;
+
+}
+
+details summary::-webkit-details-marker {
+    float: right;
+
+}
+
+
+/* image for mobile */
+
+.image--mob {
+    transform: translateY(-110px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mainimg--mob {
+    z-index: 10;
+}
+
+.shadow--mob {
+    z-index: 1;
+    margin-top: -75px;
+}
+
+/* faq dropdown */
+
+details>summary {
+    list-style-type: none;
+}
+
+details>summary::-webkit-details-marker {
+    display: none;
+}
+
+details>summary::before {
+    float: right;
+    content: url('./images/icon-arrow-down.svg');
+    padding: 0px 7px;
+}
+
+details>summary::after {
+    font-weight: 800;
+}
+
+details[open]>summary::before {
+    content: url('./images/icon-arrow-down.svg');
+    transform: rotate(180deg);
+}
+
+.summarybold {
+    font-weight: 800;
+    color: #4A4B5E;
+}
+
+
+@media screen and (min-width: 375px) {
+
+    div#box {
+        width: 360px;
+    }
+
+}
+
+
+@media screen and (min-width: 640px) {
+
+    html,
+    body {
+        background-color: beige;
+        height: 100vh;
+        width: 100vw;
+    }
+
+
+
+}
